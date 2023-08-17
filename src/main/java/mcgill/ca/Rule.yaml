@@ -1,0 +1,46 @@
+---
+name: "naming convention 2"
+priority: 2
+description: "second naming convention rule"
+label: "NamingConventionRule"
+convention: "testStateWithScenario"
+REGEX: "test(\\w+)With(\\w+)"
+---
+name: "naming convention 1"
+priority: 1
+description: "first naming convention rule"
+label: "NamingConventionRule"
+convention: "testScenario"
+REGEX: "test(\\w+)"
+---
+name: "Grammar Rule 1"
+priority: 5
+description: "check grammar pattern for Scenario"
+label: "GrammarPatternRule"
+convention: "Scenario"
+pattern: "NP"
+---
+name: "Range Check Rule 1"
+priority: 4
+description: "check if adult student is created or not"
+label: "RangeCheckRule"
+object: "student"
+position: 2
+lowBoundInclusive: 1
+hiBoundInclusive: 18
+fragment: "State"
+val: "NotAdult"
+---
+name: "Range Check Rule 2"
+priority: 4
+description: "check if adult student is created or not"
+label: "RangeCheckRule"
+object: "student"
+position: 2
+lowBoundInclusive: 19
+hiBoundInclusive: 100
+fragment: "State"
+val: "Adult"
+
+
+

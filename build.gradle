@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.4'
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.4:models'
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+    implementation 'org.testng:testng:7.7.0'
+//    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    implementation 'org.junit.platform:junit-platform-launcher:1.9.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.9.3'
+    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.25.1'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+    implementation 'be.cylab:snakeyaml:1.25.1'
+    implementation 'org.mvel:mvel2:2.5.0.Final'
+}
+
+test {
+    useJUnitPlatform()
+}
